@@ -45,7 +45,6 @@
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-junit</artifactId>
     <version>4.2.0</version>
-    <scope>test</scope>
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
@@ -69,7 +68,6 @@
     <groupId>io.rest-assured</groupId>
     <artifactId>rest-assured</artifactId>
     <version>4.4.0</version>
-    <scope>test</scope>
 </dependency>
     
 <!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
