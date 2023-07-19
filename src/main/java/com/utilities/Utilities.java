@@ -35,14 +35,16 @@ public class Utilities {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--remote-allow-origins=*");
-			// options.setHeadless(true);
+			options.setHeadless(true);
+			options.addArguments("--disable-gpu");
 			driver = new ChromeDriver(options);
 		}
 		else {
 			WebDriverManager.edgedriver().setup();
 			EdgeOptions options = new EdgeOptions();
 			options.addArguments("--remote-allow-origins=*");
-			// options.setHeadless(true);
+			options.setHeadless(true);
+			options.addArguments("--disable-gpu");
 			driver = new EdgeDriver(options);
 		}
 		
