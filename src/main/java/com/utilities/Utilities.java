@@ -33,12 +33,17 @@ public class Utilities {
 	public void launchBrowser(String browserName) {
 		if (browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			ChromeOptions options = new ChromeOptions().addArguments("--remote-allow-origins=*");
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			options.setHeadless(true);
 			driver = new ChromeDriver(options);
 		}
 		else {
 			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver(new EdgeOptions().addArguments("--remote-allow-origins=*"));
+			EdgeOptions options = new EdgeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			options.setHeadless(true);
+			driver = new EdgeDriver(options);
 		}
 		
 		driver.manage().window().maximize();
