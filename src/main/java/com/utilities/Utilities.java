@@ -32,17 +32,17 @@ public class Utilities {
 	
 	public void launchBrowser(String browserName) {
 		if (browserName.equalsIgnoreCase("chrome")) {
-			WebDriverManager.chromedriver().setup();
+			// WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--remote-allow-origins=*");
+			// options.addArguments("--remote-allow-origins=*");
 			options.setHeadless(true);
 			options.addArguments("--disable-gpu");
 			driver = new ChromeDriver(options);
 		}
 		else {
-			WebDriverManager.edgedriver().setup();
+			// WebDriverManager.edgedriver().setup();
 			EdgeOptions options = new EdgeOptions();
-			options.addArguments("--remote-allow-origins=*");
+			// options.addArguments("--remote-allow-origins=*");
 			options.setHeadless(true);
 			options.addArguments("--disable-gpu");
 			driver = new EdgeDriver(options);
